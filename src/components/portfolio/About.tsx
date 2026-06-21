@@ -71,9 +71,7 @@ export function About() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="mx-auto mt-10 max-w-2xl text-base font-medium leading-relaxed text-foreground/80 sm:text-lg"
         >
-          An engineering student specializing in Computer Science, I build modern web
-          applications with JavaScript, React, Node.js and Python. I love collaborating on
-          products that solve real-world problems and stand out from the crowd.
+          Aspiring Software Engineer with hands-on experience building real-world applications that address practical challenges in Hospital Management Assistance,Student Management System.Experienced in developing scalable, user-centric web applications using React.js, JavaScript, Java, and SQL, with a focus on performance and maintainability. Strong problem-solving mindset with the ability to transform ideas into practical, user-focused software solutions. Committed to continuous learning and delivering meaningful impact through technology.
           <br />
           Let's create something amazing together!
         </motion.p>

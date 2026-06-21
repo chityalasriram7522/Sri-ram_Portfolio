@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import bolt from "@/assets/deco-bolt.png";
 import flower from "@/assets/deco-flower-purple.png";
+import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa";
 
 const float = { animate: { y: [0, -14, 0] } };
 
@@ -19,6 +20,12 @@ export function Contact() {
     const subject = encodeURIComponent(`Portfolio enquiry from ${form.name || "website"}`);
     window.location.href = `mailto:chityalasriram@gmail.com?subject=${subject}&body=${body}`;
   };
+  const socialLinks = {
+  github: "https://github.com/chityalasriram7522",
+  linkedin: "https://www.linkedin.com/in/chityala-sriram-a4960030b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BTVxzuQldRS2bRTm5dzPM2g%3D%3D",
+  gmail: "mailto:sriramchityala7522@gmail.com",
+  twitter: "https://x.com/chityalasriram",
+};
 
   return (
     <section id="contact" className="relative overflow-hidden bg-white px-4 py-28 text-black">
@@ -71,6 +78,41 @@ export function Contact() {
           >
             chityalasriram7522@gmail.com
           </a>
+          <div className="mt-6 flex gap-5">
+  <a
+    href={socialLinks.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition-transform hover:scale-110"
+  >
+    <FaGithub size={28} />
+  </a>
+
+  <a
+    href={socialLinks.linkedin}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition-transform hover:scale-110"
+  >
+    <FaLinkedin size={28} />
+  </a>
+
+  <a
+    href={socialLinks.gmail}
+    className="transition-transform hover:scale-110"
+  >
+    <FaEnvelope size={28} />
+  </a>
+
+  <a
+    href={socialLinks.twitter}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition-transform hover:scale-110"
+  >
+    <FaTwitter size={28} />
+  </a>
+</div>
         </div>
 
         {/* Right: form */}

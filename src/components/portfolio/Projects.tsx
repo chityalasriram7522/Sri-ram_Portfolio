@@ -11,6 +11,7 @@ type Project = {
   description: string;
   tags: string[];
   image: string;
+  link: string;
 };
 
 const projects: Project[] = [
@@ -21,6 +22,7 @@ const projects: Project[] = [
       "A voice-enabled assistant that streamlines hospital workflows using speech recognition and synthesis for hands-free interaction.",
     tags: ["React", "Web Speech API", "Speech Synthesis"],
     image: project1,
+    link: "https://chityalasriram7522.github.io/Hospital-Management-Assistant-Using-React/",
   },
   {
     title: "Dwaraka Foundation",
@@ -29,6 +31,7 @@ const projects: Project[] = [
       "An end-to-end donation platform enabling secure contributions, campaign tracking and transparent fund management.",
     tags: ["Node.js", "MongoDB", "JavaScript"],
     image: project2,
+    link: "https://chityalasriram7522.github.io/Dwaraka-Foundation-Social-Impact-Platform-using-Javascript/",
   },
   {
     title: "Bhagavad Gita Digital",
@@ -37,6 +40,7 @@ const projects: Project[] = [
       "A digital library of verses with a powerful search engine, letting users explore teachings instantly and intuitively.",
     tags: ["React", "JSON", "Search Engine"],
     image: project3,
+    link: "https://chityalasriram7522.github.io/Bhagavad-Gita-Book/",
   },
 ];
 
@@ -64,16 +68,20 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
           </h3>
           <p className="truncate text-xs text-muted-foreground sm:text-sm">{project.subtitle}</p>
         </div>
-        <span
-          className={`shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-[10px] font-bold uppercase tracking-widest transition-all sm:text-xs ${
-            open
-              ? "border-foreground bg-foreground/5 text-foreground"
-              : "border-white/25 text-muted-foreground group-hover:border-foreground group-hover:text-foreground"
-          } inline-flex`}
-        >
-          Live <span className="hidden sm:inline">Project</span>
-          <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-        </span>
+        <a
+  href={project.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={(e) => e.stopPropagation()}
+  className={`shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-[10px] font-bold uppercase tracking-widest transition-all sm:text-xs ${
+    open
+      ? "border-foreground bg-foreground/5 text-foreground"
+      : "border-white/25 text-muted-foreground group-hover:border-foreground group-hover:text-foreground"
+  } inline-flex`}
+>
+  Live <span className="hidden sm:inline">Project</span>
+  <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+</a>
       </button>
 
       <AnimatePresence initial={false}>

@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, Download } from "lucide-react";
 import portrait from "@/assets/ChatGPT Image Jun 20, 2026, 09_29_50 PM-Photoroom.png";
+import resume from "@/assets/SRIRAMRESUME.pdf";
 
 export function Hero() {
   return (
@@ -63,7 +64,7 @@ style={{
             transition={{ duration: 0.6, delay: 0.3 }}
             className="z-20 mt-2 max-w-xs text-center text-sm font-bold uppercase leading-relaxed tracking-wider text-muted-foreground sm:absolute sm:left-0 sm:top-1/3 sm:text-left"
           >
-            A full stack developer passionate about crafting bold and modern web projects ✦
+            A frontend developer passionate about crafting bold and modern web projects ✦
           </motion.p>
 
           {/* CTA bottom-left side-by-side */}
@@ -81,7 +82,7 @@ style={{
     <ArrowRight className="h-4 w-4" />
   </a>
   <a
-    href="/resume.pdf"
+    href={resume}
     download
     className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-xs font-bold uppercase tracking-widest text-foreground transition-colors hover:bg-white/10"
   >
